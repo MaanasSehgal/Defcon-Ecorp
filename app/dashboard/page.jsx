@@ -25,7 +25,7 @@ const Page = () => {
 
     function getRandomNumber() {
         const gain = Math.round(Math.floor(Math.random() * 2) + 1);
-        return Math.round(Math.random() * 5000) * Math.pow(1, gain);
+        return Math.round(Math.random() * 5000) * Math.pow(-1, gain);
     }
 
     useEffect(() => {
