@@ -1,8 +1,41 @@
 "use client";
 import React, { useEffect } from "react";
-import {authenticateUser,forgotPassword} from "@/app/user.js";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
-const page = () => {
+import "../globals.css"
+// import { forgotPassword, authenticateUser } from "../user";
+
+const Page = () => {
+  const router = useRouter();
+  const users = [
+    {
+      username: "elliot",
+      password: "elliot",
+    },
+    {
+      username: "user2",
+      password: "user2-password",
+    },
+  ];
+
+function forgotPassword() {
+    console.log("Forgot password link clicked.");
+  }
+  
+function authenticateUser(username, password) {
+
+    const foundUser = users.find((user) => user.username === username);
+    if (foundUser && foundUser.password === password) {
+      alert("success");
+      router.push('/dashboard')
+      //window.location.href = "dashboard.html"; //ADD DASHBOARD PAGE
+    } else {
+      // window.location.href = "stall.html"
+      alert("Get good..");
+    }
+  }
+  
+
   useEffect(() => {
     const init = () => {
       const row = document.querySelector("section");
@@ -70,4 +103,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
