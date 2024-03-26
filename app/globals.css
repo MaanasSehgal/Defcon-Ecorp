@@ -1,3 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -75,7 +81,6 @@ section span {
     box-sizing: border-box;
     border-width: 3px;
     border-style: solid;
-    /* font-family: "VT323", monospace; */
     font-weight: 400;
     font-style: normal;
     font-size: 3.5em;
@@ -143,9 +148,9 @@ section span {
     color: #fff;
     font-weight: 500;
     font-size: 1em;
-}
+} 
 
-.signin .content .form .inputBox i {
+ .signin .content .form .inputBox i {
     position: absolute;
     left: 0;
     padding: 15px 10px;
@@ -244,4 +249,5 @@ input[type="submit"]:active {
     .signin {
         width: 80vw;
     }
-}
+} 
+

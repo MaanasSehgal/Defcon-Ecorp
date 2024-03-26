@@ -1,4 +1,5 @@
 "use client";
+
 const users = [
   {
     username: "elliot",
@@ -15,6 +16,7 @@ export function forgotPassword() {
 }
 
 export function authenticateUser(username, password) {
+  const router = useRouter();
   const foundUser = users.find((user) => user.username === username);
   if (foundUser && foundUser.password === password) {
     alert("success");
