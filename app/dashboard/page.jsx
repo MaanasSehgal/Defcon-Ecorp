@@ -37,7 +37,7 @@ const Page = () => {
     }, []);
     return (
         <Box m="20px">
-            <h2 className="text-custom-green text-5xl text-center font-press-start mb-5">EvilCorp</h2>
+            <h2 className="text-custom-green text-6xl text-center font-press-start mb-5 title-font">EvilCorp</h2>
             {/* HEADER */}
             {/* <Box display="flex" justifyContent="space-between" alignItems="center">
 
