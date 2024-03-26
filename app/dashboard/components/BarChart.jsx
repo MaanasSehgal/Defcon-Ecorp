@@ -18,7 +18,7 @@ const BarChart = ({isDashboard = false}) => {
                     return el;
                 })
             );
-        }, 4000);
+        }, 2000);
 
         return () => clearInterval(interval);
     }, []);
