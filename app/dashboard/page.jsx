@@ -76,7 +76,7 @@ const Page = () => {
                     <div className="border-2 border-custom-green moving-border flex">
                         <StatBox
                             className="bg-transparent"
-                            title={Math.round(num / 2) - 50000}
+                            title={Math.round(num / 4)}
                             subtitle="Sales Extorted"
                             progress="0.40"
                             increase="+21%"
