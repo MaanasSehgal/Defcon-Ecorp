@@ -17,11 +17,11 @@ const LineChart = ({isCustomLineColors = false, isDashboard = false}) => {
                     ...el,
                     data: el.data.map((item) => ({
                         ...item,
-                        y: Math.floor(Math.random() * 20) * 50,
+                        y: Math.floor(Math.random() * 300 + 50) 
                     })),
                 }))
             );
-        }, 1000);
+        }, 4000);
 
         return () => clearInterval(interval);
     }, []);
