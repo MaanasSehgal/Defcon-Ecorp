@@ -30,7 +30,7 @@ const Page = () => {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setNum((c) => c + getRandomNumber());
+            setNum((c) => Math.abs(c + getRandomNumber()));
         }, 4000);
 
         return () => clearInterval(interval);
@@ -166,7 +166,7 @@ const Page = () => {
                         <ProgressCircle offset={1} size="125" />
                         <Typography variant="h5" color={colors.greenAccent[500]} sx={{mt: "15px"}}>
                             $
-                            <AnimatedNumber value={num - 6843} size={25} hasComma={true} duration={2000} />
+                            <AnimatedNumber value={num} size={25} hasComma={true} duration={2000} />
                             <span> </span>
                             revenue generated
                         </Typography>
