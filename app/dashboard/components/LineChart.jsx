@@ -13,11 +13,11 @@ const LineChart = ({isCustomLineColors = false, isDashboard = false}) => {
     useEffect(() => {
         const interval = setInterval(() => {
             setLineChartData((prevData) =>
-                prevData.map((el) => ({
+                prevData.map((el, index) => ({
                     ...el,
                     data: el.data.map((item) => ({
                         ...item,
-                        y: Math.floor(Math.random() * 300 + 50) 
+                        y: Math.floor(Math.random() * 300 + index * 100),
                     })),
                 }))
             );
