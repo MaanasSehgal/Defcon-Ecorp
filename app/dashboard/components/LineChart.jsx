@@ -11,18 +11,24 @@ const LineChart = ({isCustomLineColors = false, isDashboard = false}) => {
     const [lineChartData, setLineChartData] = useState(data);
 
     useEffect(() => {
-        setInterval(() => {
-            lineChartData.map((el) => {
-                el.data.map((item) => {
-                    item.y = 1;
-                });
-            });
-            setLineChartData(data);
-        }, 3000);
-    });
+        const interval = setInterval(() => {
+            setLineChartData((prevData) =>
+                prevData.map((el) => ({
+                    ...el,
+                    data: el.data.map((item) => ({
+                        ...item,
+                        y: Math.floor(Math.random() * 20) * 50,
+                    })),
+                }))
+            );
+        }, 1000);
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <ResponsiveLine
-            data={data}
+            data={lineChartData}
             theme={{
                 axis: {
                     domain: {
