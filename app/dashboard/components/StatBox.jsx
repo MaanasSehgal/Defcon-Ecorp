@@ -3,7 +3,7 @@ import {tokens} from "../../theme";
 import ProgressCircle from "./ProgressCircle";
 import AnimatedNumber from "react-awesome-animated-number";
 
-const StatBox = ({title, subtitle, icon, progress, increase}) => {
+const StatBox = ({title, subtitle, icon, progress, increase, offset}) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
 
@@ -17,7 +17,7 @@ const StatBox = ({title, subtitle, icon, progress, increase}) => {
                     </Typography>
                 </Box>
                 <Box className="p-5">
-                    <ProgressCircle progress={progress} />
+                    <ProgressCircle offset={offset} progress={progress} />
                 </Box>
             </Box>
             <Box display="flex" justifyContent="space-between" mt="2px">

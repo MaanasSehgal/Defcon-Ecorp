@@ -68,6 +68,7 @@ const Page = () => {
                             subtitle="Threats Sent"
                             progress="0.2"
                             increase="+14%"
+                            offset={2}
                             icon={<EmailIcon sx={{color: colors.greenAccent[600], fontSize: "26px"}} />}
                         />
                     </div>
@@ -80,6 +81,7 @@ const Page = () => {
                             subtitle="Sales Extorted"
                             progress="0.40"
                             increase="+21%"
+                            offset={3}
                             icon={<PointOfSaleIcon sx={{color: colors.greenAccent[600], fontSize: "26px"}} />}
                         />
                     </div>
@@ -92,6 +94,7 @@ const Page = () => {
                             subtitle="New Victims"
                             progress="0.30"
                             increase="+5%"
+                            offset={4}
                             icon={<PersonAddIcon sx={{color: colors.greenAccent[600], fontSize: "26px"}} />}
                         />
                     </div>
@@ -104,6 +107,7 @@ const Page = () => {
                             subtitle="Traffic Received"
                             progress="0.4"
                             increase="+43%"
+                            offset={5}
                             icon={<TrafficIcon sx={{color: colors.greenAccent[600], fontSize: "26px"}} />}
                         />
                     </div>
@@ -159,7 +163,7 @@ const Page = () => {
                         Campaign
                     </Typography>
                     <Box display="flex" flexDirection="column" alignItems="center" mt="25px">
-                        <ProgressCircle size="125" />
+                        <ProgressCircle offset={1} size="125" />
                         <Typography variant="h5" color={colors.greenAccent[500]} sx={{mt: "15px"}}>
                             $
                             <AnimatedNumber value={num - 6843} size={25} hasComma={true} duration={2000} />

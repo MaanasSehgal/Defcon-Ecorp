@@ -1,0 +1,40 @@
+@property --bg-angle {
+    inherits: false;
+    initial-value: 0deg;
+    syntax: "<angle>";
+}
+
+.progress-circle {
+    background: radial-gradient(black 55%, transparent 56%), conic-gradient(transparent 0deg var(--bg-angle), dimgray var(--bg-angle) 360deg) #22c55e;
+    animation: animation 4s linear infinite;
+}
+
+@keyframes animation {
+    0% {
+        --bg-angle: 0deg;
+    }
+    12% {
+        --bg-angle: 45deg;
+    }
+    25% {
+        --bg-angle: 90deg;
+    }
+    37% {
+        --bg-angle: 90deg;
+    }
+    50% {
+        --bg-angle: 135deg;
+    }
+    63% {
+        --bg-angle: 135deg;
+    }
+    75% {
+        --bg-angle: 270deg;
+    }
+    88% {
+        --bg-angle: 270deg;
+    }
+    100% {
+        --bg-angle: 360deg;
+    }
+}

@@ -1,22 +1,22 @@
-import { Box, useTheme } from "@mui/material";
-import { tokens } from "../../theme";
+import {Box, useTheme} from "@mui/material";
+import {tokens} from "../../theme";
+import "./progressCircle.css";
 
-const ProgressCircle = ({ progress = "0.75", size = "40" }) => {
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
-  const angle = progress * 360;
-  return (
-    <Box
-      sx={{
-        background: `radial-gradient(${colors.primary[100]} 55%, transparent 56%),
-            conic-gradient(transparent 0deg ${angle}deg, ${colors.grey[700]} ${angle}deg 360deg),
-            ${colors.greenAccent[500]}`,
-        borderRadius: "50%",
-        width: `${size}px`,
-        height: `${size}px`,
-      }}
-    />
-  );
+const ProgressCircle = ({offset, size = "40"}) => {
+    const theme = useTheme();
+    const colors = tokens(theme.palette.mode);
+    return (
+        <Box
+            className="progress-circle"
+            sx={{
+                animationDelay: `${offset}s`,
+                borderRadius: "50%",
+                width: `${size}px`,
+                height: `${size}px`,
+                transition: "background 2s linear",
+            }}
+        />
+    );
 };
 
 export default ProgressCircle;
