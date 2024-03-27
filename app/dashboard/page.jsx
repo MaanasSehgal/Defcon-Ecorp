@@ -160,7 +160,7 @@ const Page = () => {
                         <div className={`text-white ${hiddenUsernameState}`}>S. Miller</div>
                         <Box onClick={handleDownloadClick}>
                             <IconButton>
-                                <DownloadOutlinedIcon sx={{fontSize: "26px", color: colors.greenAccent[500]}} className="animate-pulse bg-transparent"  style={{ animation: 'glow 1s infinite alternate ' }}/>
+                                <DownloadOutlinedIcon sx={{fontSize: "26px", color: colors.greenAccent[500]}} className="animate-pulse  bg-transparent"/>
                             </IconButton>
                         </Box>
                     </Box>
