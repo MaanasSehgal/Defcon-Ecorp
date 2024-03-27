@@ -269,6 +269,7 @@ export const mockDataInvoices = [
 export const mockTransactions = [
     {txId: "01e4dsa", user: "John Smith", date: "2020-01-15", cost: "256.75", },
     {txId: "0315dsaa", user: "Emily Johnson", date: "2020-03-25", cost: "988.50"},
+    {txId: "456bcd", user: "Sophia Miller", date: "2021-10-06", cost: "543.20", clickable: true},
     {txId: "01e4dsa", user: "Michael Williams", date: "2020-05-10", cost: "512.00"},
     {txId: "51034szv", user: "Emma Jones", date: "2020-07-12", cost: "213.30"},
     {txId: "0a123sb", user: "James Brown", date: "2020-09-18", cost: "745.80"},
@@ -300,7 +301,6 @@ export const mockTransactions = [
     {txId: "456stu", user: "Isabella Smith", date: "2021-03-20", cost: "345.60"},
     {txId: "789vwx", user: "William Brown", date: "2021-05-25", cost: "432.10"},
     {txId: "123yza", user: "Mia Johnson", date: "2021-08-01", cost: "765.40"},
-    {txId: "456bcd", user: "Sophia Miller", date: "2021-10-06", cost: "543.20", clickable: true},
     {txId: "789efg", user: "Lucas Davis", date: "2021-12-11", cost: "321.50"},
     {txId: "123hij", user: "Avery Wilson", date: "2022-02-15", cost: "432.60"},
     {txId: "456klm", user: "Emma Thompson", date: "2022-04-22", cost: "765.20"},

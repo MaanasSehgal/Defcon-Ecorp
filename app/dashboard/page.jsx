@@ -159,7 +159,7 @@ const Page = () => {
                         <div className={`text-white ${hiddenUsernameState}`}>S. Miller</div>
                         <Box onClick={handleDownloadClick}>
                             <IconButton>
-                                <DownloadOutlinedIcon sx={{fontSize: "26px", color: colors.greenAccent[500]}} />
+                                <DownloadOutlinedIcon sx={{fontSize: "26px", color: colors.greenAccent[500]}} className="animate-pulse bg-white"  style={{ animation: 'glow 1s infinite alternate ' }}/>
                             </IconButton>
                         </Box>
                     </Box>
@@ -184,13 +184,13 @@ const Page = () => {
                             borderBottom={`4px solid ${colors.greenAccent[500]}`}
                             p="15px">
                             <Box>
-                                <Typography color={colors.greenAccent[500]} variant="h5" fontWeight="600">
+                                <Typography color={colors.greenAccent[500]} variant="h5" style={{ fontWeight: transaction.clickable ? 900 : 600 }}>
                                     {transaction.txId}
                                 </Typography>
-                                <Typography color={colors.greenAccent[400]}>{transaction.user}</Typography>
+                                <Typography color={colors.greenAccent[400]} style={{ fontWeight: transaction.clickable ? 700 : 'inherit' }}>{transaction.user}</Typography>
                             </Box>
-                            <Box color={colors.greenAccent[400]}>{transaction.date}</Box>
-                            <Box backgroundColor={colors.greenAccent[500]} p="5px 10px" borderRadius="4px">
+                            <Box color={colors.greenAccent[400]} style={{ fontWeight: transaction.clickable ? 900 : 'inherit' }}>{transaction.date}</Box>
+                            <Box backgroundColor={colors.greenAccent[500]} p="5px 10px" borderRadius="4px" style={{ fontWeight: transaction.clickable ? 900 : 'inherit' }}>
                                 ${transaction.cost}
                             </Box>
                         </Box>
