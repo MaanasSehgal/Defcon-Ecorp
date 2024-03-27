@@ -10,7 +10,7 @@ const StatBox = ({title, subtitle, icon, progress, increase, offset}) => {
     return (
         <Box width="100%" m="0 30px">
             <Box display="flex" justifyContent="space-between">
-                <Box>
+                <Box display="flex" className="items-center justify-center gap-3">
                     {icon}
                     <Typography variant="h4" fontWeight="bold" sx={{color: colors.greenAccent[500]}}>
                         <AnimatedNumber value={title} size={25} hasComma={true} duration={2000} />
