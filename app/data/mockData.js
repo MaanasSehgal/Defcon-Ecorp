@@ -269,8 +269,8 @@ export const mockDataInvoices = [
 export const mockTransactions = [
     {txId: "01e4dsa", user: "John Smith", date: "2020-01-15", cost: "256.75", },
     {txId: "0315dsaa", user: "Emily Johnson", date: "2020-03-25", cost: "988.50"},
-    {txId: "456bcd", user: "Sophia Miller", date: "2021-10-06", cost: "543.20", clickable: true},
     {txId: "01e4dsa", user: "Michael Williams", date: "2020-05-10", cost: "512.00"},
+    {txId: "456bcd", user: "Sophia Miller", date: "2021-10-06", cost: "543.20", clickable: true},
     {txId: "51034szv", user: "Emma Jones", date: "2020-07-12", cost: "213.30"},
     {txId: "0a123sb", user: "James Brown", date: "2020-09-18", cost: "745.80"},
     {txId: "01e4dsa", user: "Olivia Davis", date: "2020-11-30", cost: "163.45"},

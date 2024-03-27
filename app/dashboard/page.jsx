@@ -45,7 +45,7 @@ const Page = () => {
 
     const notify = () => {
         console.log("hi")
-        toast("Ohh.. You cracked me! Here's your key: 1234-5678-9012-3456");}
+        toast(`Ohh.. You cracked me! Here's your key: ${user}`);}
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -61,6 +61,7 @@ const Page = () => {
                 toastOptions={{
                     className: '',
                     style: {
+                    minWidth: '450px',
                     border: '1px solid #55e635',
                     padding: '16px',
                     backgroundColor: '#000000',
@@ -159,7 +160,7 @@ const Page = () => {
                         <div className={`text-white ${hiddenUsernameState}`}>S. Miller</div>
                         <Box onClick={handleDownloadClick}>
                             <IconButton>
-                                <DownloadOutlinedIcon sx={{fontSize: "26px", color: colors.greenAccent[500]}} className="animate-pulse bg-white"  style={{ animation: 'glow 1s infinite alternate ' }}/>
+                                <DownloadOutlinedIcon sx={{fontSize: "26px", color: colors.greenAccent[500]}} className="animate-pulse bg-transparent"  style={{ animation: 'glow 1s infinite alternate ' }}/>
                             </IconButton>
                         </Box>
                     </Box>
