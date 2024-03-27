@@ -19,6 +19,7 @@ import "react-awesome-animated-number/dist/index.css";
 import {useEffect, useState} from "react";
 import BaseContext from "../contexts/BaseContext";
 import {useContext} from "react";
+import toast, { Toaster } from 'react-hot-toast';
 
 const Page = () => {
     const theme = useTheme();
@@ -42,9 +43,9 @@ const Page = () => {
         }, 5000);
     }
 
-    function handleHint2() {
-        alert("Ohh.. You cracked me! Here's your key: 1234-5678-9012-3456");
-    }
+    const notify = () => {
+        console.log("hi")
+        toast("Ohh.. You cracked me! Here's your key: 1234-5678-9012-3456");}
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -56,6 +57,17 @@ const Page = () => {
     return (
         // {user}
         <Box m="20px" className="hover:cursor-default hover:select-none">
+            <Toaster
+                toastOptions={{
+                    className: '',
+                    style: {
+                    border: '1px solid #55e635',
+                    padding: '16px',
+                    backgroundColor: '#000000',
+                    color: '#55e635',
+                    },
+                }}
+                />
             <h2 className="text-custom-green text-6xl text-center font-press-start mb-5 hover:cursor-default title-font">EvilCorp</h2>
             {/* HEADER */}
             {/* <Box display="flex" justifyContent="space-between" alignItems="center">
@@ -163,7 +175,7 @@ const Page = () => {
                     </Box>
                     {mockTransactions.map((transaction, i) => (
                         <Box
-                            onClick={transaction.clickable && handleHint2}
+                            onClick={transaction.clickable && notify}
                             className={`${transaction.clickable && "cursor-pointer"}`}
                             key={`${transaction.txId}-${i}`}
                             display="flex"
