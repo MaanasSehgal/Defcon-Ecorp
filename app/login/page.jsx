@@ -88,7 +88,7 @@ const Page = () => {
         <section>
             <form id="loginForm" className="signin" onSubmit={handleSubmit}>
                 <div className="content">
-                    <h2>Login</h2>
+                    <h2 className="evilcorp-font">Login</h2>
                     <div className="form">
                         <label className="inputBox" htmlFor="username">
                             <input type="text" id="username" name="username" required /> <i>Username</i>
@@ -102,7 +102,7 @@ const Page = () => {
                             <Link href="/forgot" onClick={forgotPassword}>
                                 Forgot password?
                             </Link>
-                            <Link href="/signup">Signup</Link>{" "}
+                            <Link href="/signup">Signup</Link>
                         </label>
                         <div className="inputBox">
                             <input type="submit" />
