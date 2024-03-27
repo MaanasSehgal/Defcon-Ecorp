@@ -1,0 +1,38 @@
+/* Notification.css */
+.notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0f0;
+    color: #000;
+    border: 2px solid #0f0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slide-in 0.5s forwards;
+}
+
+.notification-content {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.notification-close {
+    border: none;
+    background: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(-50%) translateY(-100%);
+    }
+    to {
+        transform: translateX(-50%) translateY(0);
+    }
+}

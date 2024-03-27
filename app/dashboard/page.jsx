@@ -43,7 +43,7 @@ const Page = () => {
     }
 
     function handleHint2() {
-        alert("Transaction clicked.");
+        alert("Ohh.. You cracked me! Here's your key: 1234-5678-9012-3456");
     }
 
     useEffect(() => {
@@ -144,7 +144,7 @@ const Page = () => {
                                 <AnimatedNumber value={num} size={50} hasComma={true} duration={2000} />
                             </Typography>
                         </Box>
-                        <div className={`text-white ${hiddenUsernameState}`}>Username</div>
+                        <div className={`text-white ${hiddenUsernameState}`}>S. Miller</div>
                         <Box onClick={handleDownloadClick}>
                             <IconButton>
                                 <DownloadOutlinedIcon sx={{fontSize: "26px", color: colors.greenAccent[500]}} />

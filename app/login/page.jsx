@@ -5,6 +5,7 @@ import {useRouter} from "next/navigation";
 import Link from "next/link";
 import "../globals.css";
 import base64 from "@hexagon/base64";
+import "./login.css";
 
 // import { forgotPassword, authenticateUser } from "../user";
 
