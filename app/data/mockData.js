@@ -437,7 +437,7 @@ export const mockLineData = [
     data: [
       {
         x: "plane",
-        y: 101,
+        y: 301,
       },
       {
         x: "helicopter",
