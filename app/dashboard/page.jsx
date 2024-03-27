@@ -1,7 +1,7 @@
 "use client";;
 
 import "./dashboard.css";
-import {Box, Button, IconButton, Typography, useTheme} from "@mui/material";
+import {Box, IconButton, Typography, useTheme} from "@mui/material";
 import {tokens} from "../theme.js";
 import {mockTransactions} from "../data/mockData.js";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
@@ -9,12 +9,14 @@ import EmailIcon from "@mui/icons-material/Email";
 import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import TrafficIcon from "@mui/icons-material/Traffic";
-import Header from "./components/Header.jsx";
 import LineChart from "./components/LineChart";
 import GeographyChart from "./components/GeographyChart";
 import BarChart from "./components/BarChart";
 import StatBox from "./components/StatBox";
 import ProgressCircle from "./components/ProgressCircle";
+import AnimatedNumber from "react-awesome-animated-number";
+import "react-awesome-animated-number/dist/index.css";
+import {useEffect, useState} from "react";
 import BaseContext from "../contexts/BaseContext";
 import { useContext } from 'react';
 
@@ -23,10 +25,23 @@ const Page = () => {
         const theme = useTheme();
     const { user } = useContext(BaseContext);
         const colors = tokens(theme.palette.mode);
+    const [num, setNum] = useState(59342);
 
+    function getRandomNumber() {
+        const gain = Math.round(Math.floor(Math.random() * 2) + 1);
+        return Math.round(Math.random() * 5000) * Math.pow(-1, gain);
+    }
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setNum((c) => Math.abs(c + getRandomNumber()));
+        }, 4000);
+
+        return () => clearInterval(interval);
+    }, []);
       return (
             <Box m="20px" className="hover:cursor-default hover:select-none">
-             <h2 className="text-custom-green text-5xl text-center font-press-start mb-5 hover:cursor-default">EvilCorp {user}</h2>
+             <h2 className="text-custom-green text-6xl text-center font-press-start mb-5 hover:cursor-default title-font">EvilCorp {user}</h2>
                   {/* HEADER */}
                   {/* <Box display="flex" justifyContent="space-between" alignItems="center">
 
@@ -53,10 +68,11 @@ const Page = () => {
                     <div className="border-2 border-custom-green moving-border flex">
                         <StatBox
                             className="bg-transparent"
-                            title="12,361"
+                            title={Math.round(num / 2)}
                             subtitle="Threats Sent"
                             progress="0.2"
                             increase="+14%"
+                            offset={2}
                             icon={<EmailIcon sx={{color: colors.greenAccent[600], fontSize: "26px"}} />}
                         />
                     </div>
@@ -65,10 +81,11 @@ const Page = () => {
                     <div className="border-2 border-custom-green moving-border flex">
                         <StatBox
                             className="bg-transparent"
-                            title="431,225"
+                            title={Math.round(num / 4)}
                             subtitle="Sales Extorted"
                             progress="0.40"
                             increase="+21%"
+                            offset={3}
                             icon={<PointOfSaleIcon sx={{color: colors.greenAccent[600], fontSize: "26px"}} />}
                         />
                     </div>
@@ -77,10 +94,11 @@ const Page = () => {
                     <div className="border-2 border-custom-green moving-border flex">
                         <StatBox
                             className="bg-transparent"
-                            title="32,441"
+                            title={Math.round(num / 3)}
                             subtitle="New Victims"
                             progress="0.30"
                             increase="+5%"
+                            offset={4}
                             icon={<PersonAddIcon sx={{color: colors.greenAccent[600], fontSize: "26px"}} />}
                         />
                     </div>
@@ -89,10 +107,11 @@ const Page = () => {
                     <div className="border-2 border-custom-green moving-border flex">
                         <StatBox
                             className="bg-transparent"
-                            title="1,325,134"
+                            title={Math.round(num * 3)}
                             subtitle="Traffic Received"
                             progress="0.4"
                             increase="+43%"
+                            offset={5}
                             icon={<TrafficIcon sx={{color: colors.greenAccent[600], fontSize: "26px"}} />}
                         />
                     </div>
@@ -106,7 +125,8 @@ const Page = () => {
                                 Revenue Generated
                             </Typography>
                             <Typography variant="h3" fontWeight="bold" color={colors.greenAccent[500]}>
-                                $59,342.32
+                                <span>$</span>
+                                <AnimatedNumber value={num} size={50} hasComma={true} duration={2000} />
                             </Typography>
                         </Box>
                         <Box>
@@ -147,9 +167,12 @@ const Page = () => {
                         Campaign
                     </Typography>
                     <Box display="flex" flexDirection="column" alignItems="center" mt="25px">
-                        <ProgressCircle size="125" />
+                        <ProgressCircle offset={1} size="125" />
                         <Typography variant="h5" color={colors.greenAccent[500]} sx={{mt: "15px"}}>
-                            $48,352 revenue generated
+                            $
+                            <AnimatedNumber value={num} size={25} hasComma={true} duration={2000} />
+                            <span> </span>
+                            revenue generated
                         </Typography>
                         {/* <Typography>Includes extra misc expenditures and costs</Typography> */}
                     </Box>

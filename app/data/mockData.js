@@ -433,7 +433,7 @@ export const mockPieData = [
 export const mockLineData = [
   {
     id: "japan",
-    color: tokens("dark").greenAccent[400],
+    color: tokens("dark").greenAccent[100],
     data: [
       {
         x: "plane",

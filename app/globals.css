@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
 * {
     margin: 0;
@@ -148,9 +148,9 @@ section span {
     color: #fff;
     font-weight: 500;
     font-size: 1em;
-} 
+}
 
- .signin .content .form .inputBox i {
+.signin .content .form .inputBox i {
     position: absolute;
     left: 0;
     padding: 15px 10px;
@@ -249,5 +249,32 @@ input[type="submit"]:active {
     .signin {
         width: 80vw;
     }
-} 
+}
 
+/* === Scrollbars === */
+
+::-webkit-scrollbar {
+    @apply w-2;
+    @apply h-1;
+}
+
+::-webkit-scrollbar-track {
+    @apply !bg-black;
+}
+::-webkit-scrollbar-thumb {
+    @apply rounded-sm !bg-green-700;
+}
+
+/* Firefox */
+html {
+    scrollbar-color: green;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
