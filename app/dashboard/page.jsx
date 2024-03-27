@@ -20,15 +20,15 @@ import { useContext } from 'react';
 
 
 const Page = () => {
-    const theme = useTheme();
+      const theme = useTheme();
     const { user } = useContext(BaseContext);
-    const colors = tokens(theme.palette.mode);
+      const colors = tokens(theme.palette.mode);
 
-  return (
-    <Box m="20px" className="hover:cursor-default hover:select-none">
-           <h2 className="text-custom-green text-5xl text-center font-press-start mb-5 hover:cursor-default">EvilCorp {user}</h2>
-      {/* HEADER */}
-      {/* <Box display="flex" justifyContent="space-between" alignItems="center">
+    return (
+        <Box m="20px" className="hover:cursor-default hover:select-none">
+            <h2 className="text-custom-green text-5xl text-center font-press-start mb-5 hover:cursor-default">EvilCorp {user}</h2>
+            {/* HEADER */}
+            {/* <Box display="flex" justifyContent="space-between" alignItems="center">
 
         <Box>
           <Button
