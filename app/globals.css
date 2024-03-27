@@ -67,6 +67,10 @@ section::before {
     }
 }
 
+.box {
+    user-select: none;
+}
+
 section span {
     position: relative;
     display: flex;

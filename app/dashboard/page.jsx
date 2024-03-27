@@ -1,4 +1,4 @@
-"use client";;
+"use client";
 
 import "./dashboard.css";
 import {Box, IconButton, Typography, useTheme} from "@mui/material";
@@ -18,18 +18,32 @@ import AnimatedNumber from "react-awesome-animated-number";
 import "react-awesome-animated-number/dist/index.css";
 import {useEffect, useState} from "react";
 import BaseContext from "../contexts/BaseContext";
-import { useContext } from 'react';
-
+import {useContext} from "react";
 
 const Page = () => {
-        const theme = useTheme();
-    const { user } = useContext(BaseContext);
-        const colors = tokens(theme.palette.mode);
+    const theme = useTheme();
+    const {user} = useContext(BaseContext);
     const [num, setNum] = useState(59342);
+    const [hiddenUsernameState, setHiddenUsernameState] = useState("hidden");
+    const colors = tokens(theme.palette.mode);
 
     function getRandomNumber() {
         const gain = Math.round(Math.floor(Math.random() * 2) + 1);
         return Math.round(Math.random() * 5000) * Math.pow(-1, gain);
+    }
+
+    function handleDownloadClick() {
+        // alert("Download button clicked.");
+        setTimeout(() => {
+            setHiddenUsernameState("animate-pulse p-2 text-gray-500 text-sm opacity-25");
+        }, 3000);
+        setTimeout(() => {
+            setHiddenUsernameState("hidden");
+        }, 5000);
+    }
+
+    function handleHint2() {
+        alert("Transaction clicked.");
     }
 
     useEffect(() => {
@@ -39,11 +53,11 @@ const Page = () => {
 
         return () => clearInterval(interval);
     }, []);
-      return (
-            <Box m="20px" className="hover:cursor-default hover:select-none">
-             <h2 className="text-custom-green text-6xl text-center font-press-start mb-5 hover:cursor-default title-font">EvilCorp {user}</h2>
-                  {/* HEADER */}
-                  {/* <Box display="flex" justifyContent="space-between" alignItems="center">
+    return (
+        <Box m="20px" className="hover:cursor-default hover:select-none">
+            <h2 className="text-custom-green text-6xl text-center font-press-start mb-5 hover:cursor-default title-font">EvilCorp {user}</h2>
+            {/* HEADER */}
+            {/* <Box display="flex" justifyContent="space-between" alignItems="center">
 
         <Box>
           <Button
@@ -129,7 +143,8 @@ const Page = () => {
                                 <AnimatedNumber value={num} size={50} hasComma={true} duration={2000} />
                             </Typography>
                         </Box>
-                        <Box>
+                        <div className={`text-white ${hiddenUsernameState}`}>Username</div>
+                        <Box onClick={handleDownloadClick}>
                             <IconButton>
                                 <DownloadOutlinedIcon sx={{fontSize: "26px", color: colors.greenAccent[500]}} />
                             </IconButton>
@@ -146,7 +161,15 @@ const Page = () => {
                         </Typography>
                     </Box>
                     {mockTransactions.map((transaction, i) => (
-                        <Box key={`${transaction.txId}-${i}`} display="flex" justifyContent="space-between" alignItems="center" borderBottom={`4px solid ${colors.greenAccent[500]}`} p="15px">
+                        <Box
+                            onClick={transaction.clickable && handleHint2}
+                            className={`${transaction.clickable && "cursor-pointer"}`}
+                            key={`${transaction.txId}-${i}`}
+                            display="flex"
+                            justifyContent="space-between"
+                            alignItems="center"
+                            borderBottom={`4px solid ${colors.greenAccent[500]}`}
+                            p="15px">
                             <Box>
                                 <Typography color={colors.greenAccent[500]} variant="h5" fontWeight="600">
                                     {transaction.txId}
@@ -162,7 +185,7 @@ const Page = () => {
                 </Box>
 
                 {/* ROW 3 */}
-                <Box className="border-2 border-custom-green moving-border flex flex-col" gridColumn="span 4" gridRow="span 2" backgroundColor="#000000" p="30px">
+                <Box className="border-2 border-custom-green moving-border flex flex-col " gridColumn="span 4" gridRow="span 2" backgroundColor="#000000" p="30px">
                     <Typography variant="h5" fontWeight="600" color={colors.greenAccent[500]}>
                         Campaign
                     </Typography>
@@ -177,7 +200,7 @@ const Page = () => {
                         {/* <Typography>Includes extra misc expenditures and costs</Typography> */}
                     </Box>
                 </Box>
-                <Box className="border-2 border-custom-green moving-border flex flex-col" gridColumn="span 4" gridRow="span 2" backgroundColor="#000000">
+                <Box className="border-2 border-custom-green moving-border flex flex-col " gridColumn="span 4" gridRow="span 2" backgroundColor="#000000">
                     <Typography color={colors.greenAccent[500]} variant="h5" fontWeight="600" sx={{padding: "30px 30px 0 30px"}}>
                         Sales Quantity
                     </Typography>
