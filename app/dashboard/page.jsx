@@ -1,4 +1,4 @@
-"use client";
+"use client";;
 
 import "./dashboard.css";
 import {Box, IconButton, Typography, useTheme} from "@mui/material";
@@ -17,10 +17,14 @@ import ProgressCircle from "./components/ProgressCircle";
 import AnimatedNumber from "react-awesome-animated-number";
 import "react-awesome-animated-number/dist/index.css";
 import {useEffect, useState} from "react";
+import BaseContext from "../contexts/BaseContext";
+import { useContext } from 'react';
+
 
 const Page = () => {
-    const theme = useTheme();
-    const colors = tokens(theme.palette.mode);
+        const theme = useTheme();
+    const { user } = useContext(BaseContext);
+        const colors = tokens(theme.palette.mode);
     const [num, setNum] = useState(59342);
 
     function getRandomNumber() {
@@ -35,11 +39,11 @@ const Page = () => {
 
         return () => clearInterval(interval);
     }, []);
-    return (
-        <Box m="20px">
-            <h2 className="text-custom-green text-6xl text-center font-press-start mb-5 title-font">EvilCorp</h2>
-            {/* HEADER */}
-            {/* <Box display="flex" justifyContent="space-between" alignItems="center">
+      return (
+            <Box m="20px" className="hover:cursor-default hover:select-none">
+             <h2 className="text-custom-green text-6xl text-center font-press-start mb-5 hover:cursor-default title-font">EvilCorp {user}</h2>
+                  {/* HEADER */}
+                  {/* <Box display="flex" justifyContent="space-between" alignItems="center">
 
         <Box>
           <Button

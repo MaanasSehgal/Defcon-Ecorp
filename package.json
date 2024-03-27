@@ -11,6 +11,7 @@
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
+    "@hexagon/base64": "^1.1.28",
     "@mui/icons-material": "^5.15.14",
     "@mui/material": "^5.15.14",
     "@nivo/bar": "^0.85.1",
