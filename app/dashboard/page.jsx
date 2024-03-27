@@ -54,8 +54,9 @@ const Page = () => {
         return () => clearInterval(interval);
     }, []);
     return (
+        // {user}
         <Box m="20px" className="hover:cursor-default hover:select-none">
-            <h2 className="text-custom-green text-6xl text-center font-press-start mb-5 hover:cursor-default title-font">EvilCorp {user}</h2>
+            <h2 className="text-custom-green text-6xl text-center font-press-start mb-5 hover:cursor-default title-font">EvilCorp</h2>
             {/* HEADER */}
             {/* <Box display="flex" justifyContent="space-between" alignItems="center">
 
