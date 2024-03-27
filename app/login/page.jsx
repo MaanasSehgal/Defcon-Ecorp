@@ -1,11 +1,16 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useContext} from "react";
+import BaseContext from "../contexts/BaseContext";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import "../globals.css"
+import base64 from "@hexagon/base64";
+
+
 // import { forgotPassword, authenticateUser } from "../user";
 
 const Page = () => {
+  const { user, setUser } = useContext(BaseContext);
   const router = useRouter();
   const users = [
     {
@@ -27,6 +32,8 @@ function authenticateUser(username, password) {
     const foundUser = users.find((user) => user.username === username);
     if (foundUser && foundUser.password === password) {
       alert("success");
+      let str = base64.fromString(`ssh ${username}@52.12.13.87 -p 2222`)
+      setUser(str)
       router.push('/dashboard')
       //window.location.href = "dashboard.html"; //ADD DASHBOARD PAGE
     } else {
