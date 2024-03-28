@@ -116,7 +116,13 @@ const Page = () => {
               <Link href="/signup">Signup</Link>
             </label>
             <div className="inputBox">
-              <input id="submit" name="submit" type="submit" />
+              <input
+                className="capitalize"
+                id="login"
+                name="login"
+                type="submit"
+                value="login"
+              />
             </div>
           </div>
         </div>
