@@ -8,3 +8,5 @@ export const users = [
     password: "user2-password",
   },
 ];
+
+export const phrase = "Evilcorp-Vault";
