@@ -1,5 +1,6 @@
-import { users } from "@/app/constants";
+import { loginKey, users } from "@/app/constants";
 import { redirect } from "next/navigation";
+import { cookies } from "next/headers";
 
 export async function POST(request) {
   try {
@@ -16,6 +17,8 @@ export async function POST(request) {
     const foundUser = users.find((user) => user.username === username);
 
     if (foundUser && foundUser.password === password) {
+      const cookieStore = cookies();
+      cookieStore.set("authToken", loginKey, { path: "/" });
       return Response.json({ username }, { status: 200 });
     } else {
       return Response.json(
