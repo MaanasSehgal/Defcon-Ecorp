@@ -278,13 +278,7 @@ const Page = () => {
               p="15px"
             >
               <Box>
-                <Typography
-                  color={colors.greenAccent[500]}
-                  variant="h5"
-                  style={{ fontWeight: transaction.clickable ? 900 : 600 }}
-                >
-                  {transaction.txId}
-                </Typography>
+               
                 <Typography
                   color={colors.greenAccent[400]}
                   style={{
@@ -296,7 +290,6 @@ const Page = () => {
               </Box>
               <Box
                 color={colors.greenAccent[400]}
-                style={{ fontWeight: transaction.clickable ? 900 : "inherit" }}
               >
                 {transaction.date}
               </Box>
@@ -304,7 +297,6 @@ const Page = () => {
                 backgroundColor={colors.greenAccent[500]}
                 p="5px 10px"
                 borderRadius="4px"
-                style={{ fontWeight: transaction.clickable ? 900 : "inherit" }}
               >
                 ${transaction.cost}
               </Box>

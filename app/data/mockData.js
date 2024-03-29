@@ -431,7 +431,7 @@ export const mockPieData = [
 
 export const mockLineData = [
     {
-        id: "japan",
+        id: "malware",
         color: tokens("dark").greenAccent[100],
         data: [
             {
@@ -485,7 +485,7 @@ export const mockLineData = [
         ],
     },
     {
-        id: "france",
+        id: "phishing",
         color: tokens("dark").greenAccent[300],
         data: [
             {
@@ -539,7 +539,7 @@ export const mockLineData = [
         ],
     },
     {
-        id: "us",
+        id: "data breach",
         color: tokens("dark").greenAccent[300],
         data: [
             {
