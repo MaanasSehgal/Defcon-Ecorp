@@ -16,14 +16,21 @@ export async function POST(request) {
 
     const foundUser = users.find((user) => user.username === username);
 
-    if (foundUser && foundUser.password === password) {
-      const cookieStore = cookies();
-      cookieStore.set("authToken", loginKey, { path: "/" });
-      return Response.json({ username }, { status: 200 });
+    if (foundUser) {
+      if (foundUser.password === password) {
+        const cookieStore = cookies();
+        cookieStore.set("authToken", loginKey, { path: "/" });
+        return Response.json({ message: 'Login successful' }, { status: 200 });
+      } else {
+        return Response.json(
+          { error: "Incorrect password" },
+          { status: 401 }
+        );
+      }
     } else {
       return Response.json(
-        { error: "Incorrect username or password" },
-        { status: 400 }
+        { error: "Incorrect username" },
+        { status: 402 }
       );
     }
   } catch (error) {

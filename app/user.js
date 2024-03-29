@@ -1,15 +1,6 @@
 "use client";
 
-const users = [
-  {
-    username: "elliot",
-    password: "elliot",
-  },
-  {
-    username: "user2",
-    password: "user2-password",
-  },
-];
+import users from "./constants/index.js";
 
 export function forgotPassword() {
   console.log("Forgot password link clicked.");
