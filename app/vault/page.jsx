@@ -15,7 +15,7 @@ const page = () => {
   useEffect(() => {
     if (state.success && !state.error) {
       //TODO: Change router
-      redirect("/dashboard");
+      redirect("/vault/secret");
     }
   }, [state.success, router]);
 

@@ -28,7 +28,7 @@ export default function FounderPage() {
                         dedication to pushing boundaries and creating impactful solutions has earned him recognition as a thought leader in the field.
                     </p>
                     <div className=" w-full flex justify-center items-center">
-                        <FounderCard name="Subhayan Das" image="/images/Founder/Subhayan.jpg" designation="Analyst @Bain and Company" />
+                        <FounderCard name="Subhayan Das" image="/images/Founder/Subhayan.jpg" designation="Analyst, Ex. Tech Lead MSC" />
                     </div>
                 </div>
             </div>
