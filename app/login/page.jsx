@@ -14,16 +14,6 @@ const Page = () => {
   const [passHidden, setPassHidden] = useState("hidden");
 
   const router = useRouter();
-  const users = [
-    {
-      username: "elliot",
-      password: "elliot",
-    },
-    {
-      username: "Maanas@123",
-      password: "Maanas@123",
-    },
-  ];
 
   function forgotPassword() {
     console.log("Forgot password link clicked.");
