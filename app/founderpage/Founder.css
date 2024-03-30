@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+body {
+    min-height: 100vh;
+    background: #000;
+}
+
+.download-font {
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Flicker */
+.border-flicker {
+    animation: border-flicker 4s linear infinite;
+}
+
+
+.founder-text {
+    animation: text-flicker 4s linear infinite;
+    text-shadow: 0 0 1px rgba(88, 227, 24, 0.5), 2px 2px 60px rgba(0, 255, 26, 0.84);
+}
+
+.offset {
+    animation: letter-flicker 3s linear infinite;
+}
+.offset1 {
+    animation: letter-flicker 2.5s linear infinite;
+}
+.offset2 {
+    animation: letter-flicker 35s linear infinite;
+}
+.offset3 {
+    animation: letter-flicker 4s linear infinite;
+}
+
+@keyframes text-flicker {
+    0% {
+        opacity: 0.5;
+    }
+
+    2% {
+        opacity: 1;
+    }
+    8% {
+        opacity: 0.5;
+    }
+    9% {
+        opacity: 1;
+    }
+    12% {
+        opacity: 0.5;
+    }
+    20% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.5;
+    }
+    30% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 0.7;
+    }
+
+    72% {
+        opacity: 0.5;
+    }
+
+    77% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 0.9;
+    }
+}
+@keyframes border-flicker {
+    0% {
+        opacity: 0.1;
+        -webkit-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+        -moz-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+        box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+    }
+
+    4% {
+        opacity: 0.1;
+        -webkit-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+        -moz-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+        box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+    }
+
+    8% {
+        opacity: 1;
+        -webkit-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+        -moz-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+        box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+    }
+    70% {
+        opacity: 0.7;
+        -webkit-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+        -moz-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+        box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+    }
+    100% {
+        opacity: 1;
+        -webkit-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+        -moz-box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+        box-shadow: 0px 0px 78px 4px rgba(16, 134, 232, 0.73);
+    }
+}
+
+@keyframes letter-flicker {
+    0% {
+        opacity: 0.1;
+    }
+    2% {
+        opacity: 0.1;
+    }
+    4% {
+        opacity: 1;
+    }
+
+    19% {
+        opacity: 1;
+    }
+    21% {
+        opacity: 0.1;
+    }
+    23% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+    83% {
+        opacity: 0.4;
+    }
+    87% {
+        opacity: 1;
+    }
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loader-border {
+    position: absolute;
+    animation: loader 1s linear infinite;
+    border-color: transparent transparent  rgba(88, 227, 24, 1) transparent;
+    z-index: 20; 
+}

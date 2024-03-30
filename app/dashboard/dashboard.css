@@ -1,6 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+}
+
 .press-start {
     font-family: "Press Start 2P", system-ui;
     font-weight: 400;
@@ -13,12 +28,12 @@
 }
 @keyframes glow {
     0% {
-      box-shadow: 0 0 5px rgba(85, 230, 53, 0.5); /* Start with a subtle glow effect */
+        box-shadow: 0 0 5px rgba(85, 230, 53, 0.5); /* Start with a subtle glow effect */
     }
     50% {
-      box-shadow: 0 0 10px rgba(85, 230, 53, 0.8); /* Increase the glow effect */
+        box-shadow: 0 0 10px rgba(85, 230, 53, 0.8); /* Increase the glow effect */
     }
     100% {
-      box-shadow: 0 0 5px rgba(85, 230, 53, 0.5); /* Back to the initial glow effect */
+        box-shadow: 0 0 5px rgba(85, 230, 53, 0.5); /* Back to the initial glow effect */
     }
-  }
+}

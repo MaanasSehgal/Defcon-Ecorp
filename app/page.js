@@ -1,7 +1,5 @@
-import Login from "./login/page"
+import FounderPage from "./founderpage/page";
 
 export default function Home() {
-  return (
-    <Login/>
-  );
+    return <FounderPage />;
 }
