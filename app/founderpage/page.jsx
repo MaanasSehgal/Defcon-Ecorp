@@ -19,7 +19,7 @@ export default function FounderPage() {
                         transformation, armed with a diverse background in technology and entrepreneurship. <br />
                     </p>
                     <div className=" w-full flex justify-center items-center">
-                        <FounderCard name="Abhinav Mukharjee" image="/images/Founder/founder1.png" designation="Software Engineer, Ex. lead MSC KIIT" />
+                        <FounderCard name="Abhinav Mukherjee" image="/images/Founder/founder1.png" designation="Software Engineer, Ex. lead MSC KIIT" />
                     </div>
                 </div>
                 <div className="flex flex-row-reverse justify-between items-center text-4xl  text-custom-green w-full my-8 px-12 download-font">
