@@ -19,7 +19,7 @@ export default function FounderPage() {
                         transformation, armed with a diverse background in technology and entrepreneurship. <br />
                     </p>
                     <div className=" w-full flex justify-center items-center">
-                        <FounderCard name="Abhinav Mukharjee" image="/images/Founder/Abhinav.jpg" designation="Software Engineer, Ex. lead MSC KIIT" />
+                        <FounderCard name="Abhinav Mukharjee" image="/images/Founder/founder1.png" designation="Software Engineer, Ex. lead MSC KIIT" />
                     </div>
                 </div>
                 <div className="flex flex-row-reverse justify-between items-center text-4xl  text-custom-green w-full my-8 px-12 download-font">
@@ -28,7 +28,7 @@ export default function FounderPage() {
                         dedication to pushing boundaries and creating impactful solutions has earned him recognition as a thought leader in the field.
                     </p>
                     <div className=" w-full flex justify-center items-center">
-                        <FounderCard name="Subhayan Das" image="/images/Founder/Subhayan.jpg" designation="Analyst, Ex. Tech Lead MSC" />
+                        <FounderCard name="Subhayan Das" image="/images/Founder/founder2.png" designation="Analyst, Ex. Tech Lead MSC" />
                     </div>
                 </div>
             </div>
