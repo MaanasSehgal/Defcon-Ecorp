@@ -30,7 +30,7 @@ const FounderCard = ({image, name, designation}) => {
             </div>
             <h2 className="text-4xl my-1">{name}</h2>
             <h3 className="text-3xl my-2">{designation}</h3>
-            <button className="border-2 border-solid border-custom-green evilcorp-font px-5 py-3 rounded-full" onClick={handleDownload}>
+            <button className="border-2 border-solid border-custom-green evilcorp-font px-5 py-3 rounded-full hover:bg-custom-green hover:text-black transition-all" onClick={handleDownload}>
                 Download
             </button>
         </div>
