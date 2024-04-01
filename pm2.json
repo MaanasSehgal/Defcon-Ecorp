@@ -1,0 +1,9 @@
+{
+    "apps": [
+        {
+            "name": "d3fc0n",
+            "script": "bun",
+            "args" : "run dev --port 80"
+        }
+    ]
+}
